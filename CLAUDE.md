@@ -60,7 +60,8 @@ El hook `Stop` ejecuta tests y lint y no te deja terminar si fallan. No es negoc
 ## Comandos
 - Verificar todo: `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verificar.ps1`
 - Auditoría de seguridad: `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/auditoria.ps1`
-- Activar hooks de git (una vez): `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/instalar-hooks-git.ps1`
+- Proyecto nuevo (clona la plantilla y activa hooks): `git clone --depth 1 https://github.com/pimgux/arnes-diusframi mi-proyecto; powershell -NoProfile -ExecutionPolicy Bypass -File mi-proyecto/scripts/nuevo-proyecto.ps1`
+- Reactivar hooks de git en un clon existente: `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/instalar-hooks-git.ps1`
 
 ## Estilo
 - Responde y comenta en español. Código e identificadores en inglés o español, pero consistentes con el proyecto.

@@ -34,17 +34,17 @@ Un conjunto de archivos que se copia a la raíz de cualquier proyecto. La idea c
 
 > **Requisitos:** Windows con PowerShell 5.1+, Git y, según el stack, Go, Rust o Node.
 
-**1. Copia** el contenido de este repo a la raíz de tu proyecto (incluidos los archivos ocultos `.claude`, `.githooks` y `.gitignore`).
-
-**2. Activa los hooks de git.** El script también te dice qué herramientas faltan (gitleaks, govulncheck, cargo-audit):
+**1. Crea el proyecto con una sola línea.** Cambia `mi-proyecto` por el nombre de tu carpeta:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File scripts/instalar-hooks-git.ps1
+git clone --depth 1 https://github.com/pimgux/arnes-diusframi mi-proyecto; powershell -NoProfile -ExecutionPolicy Bypass -File mi-proyecto/scripts/nuevo-proyecto.ps1
 ```
 
-**3. Completa** la sección **Proyecto** de `CLAUDE.md` y copia `.env.example` a `.env`.
+Clona la plantilla, **elimina su historial**, inicia un repositorio limpio (`main`), activa los hooks de git y te dice qué herramientas faltan (gitleaks, govulncheck, cargo-audit).
 
-**4. Abre Claude Code** en la carpeta. Los hooks de `.claude/settings.json` se cargan solos (la primera vez pedirá confirmación).
+**2. Completa** la sección **Proyecto** de `CLAUDE.md` y copia `.env.example` a `.env`.
+
+**3. Abre Claude Code** en `mi-proyecto`. Los hooks de `.claude/settings.json` se cargan solos (la primera vez pedirá confirmación).
 
 ## 🔄 Flujo de trabajo
 
@@ -114,7 +114,7 @@ Si el requisito no encaja, se propone la alternativa y se registra en `MEMORIA.m
 │   ├── hooks/         guardia de comandos, escaneo de secretos, verificación al terminar
 │   └── skills/        planificacion · tests-atomicos · seguridad · memoria · diseno-diusframi
 ├── .githooks/         pre-commit · commit-msg · pre-push
-├── scripts/           verificar · auditoria · instalar-hooks-git
+├── scripts/           verificar · auditoria · nuevo-proyecto · instalar-hooks-git
 ├── brand/             tokens, componentes, Tailwind/shadcn y logos Diusframi
 └── docs/              guía del arnés, seguridad e identidad visual
 ```
@@ -125,7 +125,7 @@ Si el requisito no encaja, se propone la alternativa y se registra en `MEMORIA.m
 |---|---|
 | Verificar todo (tests + lint) | `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verificar.ps1` |
 | Auditoría de seguridad | `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/auditoria.ps1` |
-| Activar hooks de git (una vez) | `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/instalar-hooks-git.ps1` |
+| Reactivar hooks de git en un clon existente | `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/instalar-hooks-git.ps1` |
 
 ## 🧩 Cómo adaptarlo
 
