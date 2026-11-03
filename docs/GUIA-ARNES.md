@@ -64,6 +64,3 @@ Requisitos: Windows con PowerShell 5.1+, Git, y según el stack: Go, Rust, Node.
 | Commit rechazado | Falta el ID `T-NNN` en el mensaje |
 | Falso positivo de secreto | Ajusta `.gitleaks.toml` (allowlist) o el patrón del hook; nunca uses `--no-verify` |
 | La ruta `$CLAUDE_PROJECT_DIR` no se resuelve en los hooks | Si tu shell de hooks no es Git Bash, cambia por ruta relativa `.claude/hooks/...` |
-
-## 8. Pendiente de completar por el equipo
-- CI que repita `verificar.ps1` y `auditoria.ps1 -Estricto` (los hooks locales se pueden saltar a mano).

@@ -205,10 +205,6 @@ Ajusta la allowlist de `.gitleaks.toml` o el patrón del hook. Nunca uses `--no-
 Si tu shell de hooks no es Git Bash, cambia por ruta relativa `.claude/hooks/...`.
 </details>
 
-## 🗺️ Pendiente
-
-- [ ] CI que repita `verificar.ps1` y `auditoria.ps1 -Estricto` (los hooks locales se pueden saltar a mano).
-
 ---
 
 <div align="center">
