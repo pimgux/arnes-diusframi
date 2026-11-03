@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 190" width="900" height="190" role="img" aria-labelledby="t d">
+  <title id="t">Flujo de trabajo del arnés</title>
+  <desc id="d">Cinco pasos: planificar, construir con test, verificar, registrar en memoria y hacer commit con ID de tarea</desc>
+  <style>
+    .lbl { font: 700 15px 'Inter','Segoe UI',Arial,sans-serif; fill: #111C4E; text-anchor: middle; }
+    .sub { font: 400 12px 'Inter','Segoe UI',Arial,sans-serif; fill: #55608C; text-anchor: middle; }
+    .num { font: 700 16px 'Inter','Segoe UI',Arial,sans-serif; fill: #fff; text-anchor: middle; }
+    .node { fill: #111C4E; }
+    .card { fill: #F2F4F9; stroke: #DDE1EE; stroke-width: 1.5; }
+    .track { stroke: #DDE1EE; stroke-width: 4; stroke-linecap: round; }
+    .glow { fill: #FF5100; opacity: 0; }
+    .g1 { animation: pulse 10s 0s infinite; }
+    .g2 { animation: pulse 10s 2s infinite; }
+    .g3 { animation: pulse 10s 4s infinite; }
+    .g4 { animation: pulse 10s 6s infinite; }
+    .g5 { animation: pulse 10s 8s infinite; }
+    @keyframes pulse { 0% { opacity: 0; transform: scale(.6) } 4% { opacity: .9; transform: scale(1) } 18% { opacity: .0; transform: scale(2.1) } 100% { opacity: 0 } }
+    .g1,.g2,.g3,.g4,.g5 { transform-box: fill-box; transform-origin: center; }
+    @media (prefers-reduced-motion: reduce) { .g1,.g2,.g3,.g4,.g5 { animation: none } }
+  </style>
+  <rect x="1" y="1" width="898" height="188" rx="16" fill="#fff" stroke="#DDE1EE"/>
+  <line class="track" x1="90" y1="70" x2="810" y2="70"/>
+
+  <g>
+    <circle class="glow g1" cx="90" cy="70" r="26"/>
+    <circle class="glow g2" cx="270" cy="70" r="26"/>
+    <circle class="glow g3" cx="450" cy="70" r="26"/>
+    <circle class="glow g4" cx="630" cy="70" r="26"/>
+    <circle class="glow g5" cx="810" cy="70" r="26"/>
+
+    <circle class="node" cx="90" cy="70" r="26"/><text class="num" x="90" y="76">1</text>
+    <circle class="node" cx="270" cy="70" r="26"/><text class="num" x="270" y="76">2</text>
+    <circle class="node" cx="450" cy="70" r="26"/><text class="num" x="450" y="76">3</text>
+    <circle class="node" cx="630" cy="70" r="26"/><text class="num" x="630" y="76">4</text>
+    <circle class="node" cx="810" cy="70" r="26"/><text class="num" x="810" y="76">5</text>
+  </g>
+
+  <text class="lbl" x="90" y="130">Planificar</text>
+  <text class="sub" x="90" y="150">TAREAS.md</text>
+  <text class="lbl" x="270" y="130">Construir + test</text>
+  <text class="sub" x="270" y="150">una tarea a la vez</text>
+  <text class="lbl" x="450" y="130">Verificar</text>
+  <text class="sub" x="450" y="150">tests + lint (hook Stop)</text>
+  <text class="lbl" x="630" y="130">Recordar</text>
+  <text class="sub" x="630" y="150">MEMORIA.md</text>
+  <text class="lbl" x="810" y="130">Commit</text>
+  <text class="sub" x="810" y="150">T-003: descripción</text>
+
+  <circle r="7" fill="#FF5100">
+    <animateMotion dur="10s" repeatCount="indefinite" path="M90,70 L810,70" keyPoints="0;0;.25;.25;.5;.5;.75;.75;1;1" keyTimes="0;.1;.2;.3;.4;.5;.6;.7;.8;1" calcMode="linear"/>
+  </circle>
+</svg>
