@@ -6,13 +6,13 @@ Para qué sirve, cómo se instala y cómo se adapta.
 Un conjunto de archivos que se copia a cada proyecto para que Claude trabaje con orden: plan con tareas, memoria, tests automáticos, seguridad y una definición única de "Hecho". La idea es que las reglas **se cumplan por mecanismo** (hooks), no porque Claude se acuerde.
 
 ## 2. Instalación (5 minutos)
-1. Ejecuta una sola línea (cambia `mi-proyecto` por el nombre de tu carpeta):
+1. Ejecuta una sola línea:
    ```bat
-   git clone --depth 1 https://github.com/pimgux/arnes-diusframi mi-proyecto && powershell -NoProfile -ExecutionPolicy Bypass -File mi-proyecto/scripts/nuevo-proyecto.ps1
+   git clone --depth 1 https://github.com/pimgux/arnes-diusframi arnes-tmp && powershell -NoProfile -ExecutionPolicy Bypass -File arnes-tmp/scripts/nuevo-proyecto.ps1
    ```
    Vale para cmd, Git Bash y PowerShell 7. En Windows PowerShell 5.1 `&&` no existe: usa `;`.
-   Clona la plantilla, elimina su historial, inicia un repo limpio en `main`, activa los hooks de git e indica qué herramientas faltan (gitleaks, govulncheck, cargo-audit). Si ya tienes una copia de los archivos, `scripts/instalar-hooks-git.ps1` solo activa los hooks.
-2. Completa en `CLAUDE.md` la sección **Proyecto**. La identidad Diusframi ya viene incluida en `brand/`.
+   El script pregunta nombre y objetivo, crea la carpeta con ese nombre (espacios → `-`; solo letras, números, `-`, `_` y `.`), rellena **Nombre** y **Objetivo** en `CLAUDE.md`, elimina el historial de la plantilla, inicia un repo limpio en `main`, activa los hooks de git, indica qué herramientas faltan (gitleaks, govulncheck, cargo-audit) y borra la carpeta temporal `arnes-tmp`. Si ya tienes una copia de los archivos, `scripts/instalar-hooks-git.ps1` solo activa los hooks.
+2. Completa en `CLAUDE.md` el **Stack elegido**. La identidad Diusframi ya viene incluida en `brand/`.
 3. Abre Claude Code en la carpeta. Los hooks de `.claude/settings.json` se cargan solos (la primera vez pedirá confirmar).
 
 Requisitos: Windows con PowerShell 5.1+, Git, y según el stack: Go, Rust, Node.

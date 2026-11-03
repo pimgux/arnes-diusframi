@@ -34,19 +34,25 @@ Un conjunto de archivos que se copia a la raíz de cualquier proyecto. La idea c
 
 > **Requisitos:** Windows con PowerShell 5.1+, Git y, según el stack, Go, Rust o Node.
 
-**1. Crea el proyecto con una sola línea.** Cambia `mi-proyecto` por el nombre de tu carpeta:
+**1. Crea el proyecto con una sola línea:**
 
 ```bat
-git clone --depth 1 https://github.com/pimgux/arnes-diusframi mi-proyecto && powershell -NoProfile -ExecutionPolicy Bypass -File mi-proyecto/scripts/nuevo-proyecto.ps1
+git clone --depth 1 https://github.com/pimgux/arnes-diusframi arnes-tmp && powershell -NoProfile -ExecutionPolicy Bypass -File arnes-tmp/scripts/nuevo-proyecto.ps1
 ```
 
 > Vale para **cmd**, Git Bash y PowerShell 7. En Windows PowerShell 5.1 (el azul de Windows) `&&` no existe: sustitúyelo por `;`.
 
-Clona la plantilla, **elimina su historial**, inicia un repositorio limpio (`main`), activa los hooks de git y te dice qué herramientas faltan (gitleaks, govulncheck, cargo-audit).
+El script te pregunta el **nombre** y el **objetivo** del proyecto y con ellos:
 
-**2. Completa** la sección **Proyecto** de `CLAUDE.md` y copia `.env.example` a `.env`.
+- crea la carpeta con el nombre del proyecto (los espacios pasan a `-`),
+- rellena **Nombre** y **Objetivo** en `CLAUDE.md`,
+- **elimina el historial** de la plantilla e inicia un repositorio limpio (`main`),
+- activa los hooks de git y te dice qué herramientas faltan (gitleaks, govulncheck, cargo-audit),
+- borra la carpeta temporal `arnes-tmp`.
 
-**3. Abre Claude Code** en `mi-proyecto`. Los hooks de `.claude/settings.json` se cargan solos (la primera vez pedirá confirmación).
+**2. Completa** el **Stack elegido** en `CLAUDE.md` y copia `.env.example` a `.env`.
+
+**3. Abre Claude Code** en la carpeta del proyecto. Los hooks de `.claude/settings.json` se cargan solos (la primera vez pedirá confirmación).
 
 ## 🔄 Flujo de trabajo
 
