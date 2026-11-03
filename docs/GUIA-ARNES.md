@@ -7,9 +7,10 @@ Un conjunto de archivos que se copia a cada proyecto para que Claude trabaje con
 
 ## 2. Instalación (5 minutos)
 1. Ejecuta una sola línea (cambia `mi-proyecto` por el nombre de tu carpeta):
-   ```powershell
-   git clone --depth 1 https://github.com/pimgux/arnes-diusframi mi-proyecto; powershell -NoProfile -ExecutionPolicy Bypass -File mi-proyecto/scripts/nuevo-proyecto.ps1
+   ```bat
+   git clone --depth 1 https://github.com/pimgux/arnes-diusframi mi-proyecto && powershell -NoProfile -ExecutionPolicy Bypass -File mi-proyecto/scripts/nuevo-proyecto.ps1
    ```
+   Vale para cmd, Git Bash y PowerShell 7. En Windows PowerShell 5.1 `&&` no existe: usa `;`.
    Clona la plantilla, elimina su historial, inicia un repo limpio en `main`, activa los hooks de git e indica qué herramientas faltan (gitleaks, govulncheck, cargo-audit). Si ya tienes una copia de los archivos, `scripts/instalar-hooks-git.ps1` solo activa los hooks.
 2. Completa en `CLAUDE.md` la sección **Proyecto**. La identidad Diusframi ya viene incluida en `brand/`.
 3. Abre Claude Code en la carpeta. Los hooks de `.claude/settings.json` se cargan solos (la primera vez pedirá confirmar).

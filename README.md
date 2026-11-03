@@ -36,9 +36,11 @@ Un conjunto de archivos que se copia a la raíz de cualquier proyecto. La idea c
 
 **1. Crea el proyecto con una sola línea.** Cambia `mi-proyecto` por el nombre de tu carpeta:
 
-```powershell
-git clone --depth 1 https://github.com/pimgux/arnes-diusframi mi-proyecto; powershell -NoProfile -ExecutionPolicy Bypass -File mi-proyecto/scripts/nuevo-proyecto.ps1
+```bat
+git clone --depth 1 https://github.com/pimgux/arnes-diusframi mi-proyecto && powershell -NoProfile -ExecutionPolicy Bypass -File mi-proyecto/scripts/nuevo-proyecto.ps1
 ```
+
+> Vale para **cmd**, Git Bash y PowerShell 7. En Windows PowerShell 5.1 (el azul de Windows) `&&` no existe: sustitúyelo por `;`.
 
 Clona la plantilla, **elimina su historial**, inicia un repositorio limpio (`main`), activa los hooks de git y te dice qué herramientas faltan (gitleaks, govulncheck, cargo-audit).
 
