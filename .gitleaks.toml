@@ -1,0 +1,11 @@
+title = "Config gitleaks del arnes"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Archivos de ejemplo sin secretos reales"
+paths = [
+  '''\.env\.example$''',
+  '''docs/.*\.md$''',
+]

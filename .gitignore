@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.db
+*.sqlite
+.claude/settings.local.json
+.claude/.stop-intentos
+node_modules/
+target/
+vendor/
+dist/
+bin/
