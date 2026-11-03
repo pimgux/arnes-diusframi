@@ -1,0 +1,138 @@
+/* Diusframi — design tokens
+   Fuente: Manual de identidad visual Diusframi.
+   Importar este archivo antes que cualquier otro CSS. */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root {
+  /* ---- Marca ---- */
+  --ds-navy: #111C4E;
+  --ds-orange: #FF5100;
+  --ds-blue: #0053FF;
+  --ds-yellow: #FFD040;
+  --ds-white: #FFFFFF;
+
+  /* ---- Escalas derivadas ---- */
+  --ds-navy-900: #0A1236;
+  --ds-navy-800: #111C4E;
+  --ds-navy-700: #1B2A6F;
+  --ds-navy-600: #2A3C8F;
+  --ds-navy-300: #8E97BC;
+  --ds-navy-100: #DDE1EE;
+  --ds-navy-50:  #F2F4F9;
+
+  --ds-orange-700: #B33900;
+  --ds-orange-600: #E04700;
+  --ds-orange-500: #FF5100;
+  --ds-orange-300: #FF9466;
+  --ds-orange-100: #FFE3D6;
+
+  --ds-blue-600: #0043CC;
+  --ds-blue-500: #0053FF;
+  --ds-blue-100: #D9E4FF;
+
+  --ds-yellow-600: #D6A400;
+  --ds-yellow-500: #FFD040;
+  --ds-yellow-100: #FFF4D6;
+
+  /* ---- Semánticos (light) ---- */
+  --ds-bg: #FFFFFF;
+  --ds-bg-subtle: #F2F4F9;
+  --ds-bg-inverse: #111C4E;
+  --ds-surface: #FFFFFF;
+  --ds-border: #DDE1EE;
+  --ds-border-strong: #8E97BC;
+  --ds-text: #111C4E;
+  --ds-text-muted: #55608C;
+  --ds-text-inverse: #FFFFFF;
+  --ds-accent: #FF5100;
+  --ds-accent-hover: #E04700;
+  --ds-accent-text: #B33900;
+  --ds-on-accent: #FFFFFF;
+  --ds-focus: #0053FF;
+  --ds-link: #111C4E;
+  --ds-link-hover: #FF5100;
+
+  --ds-success: #0E8F5B;
+  --ds-warning: #FFD040;
+  --ds-danger:  #D92D20;
+  --ds-info:    #0053FF;
+
+  /* ---- Degradado corporativo ---- */
+  --ds-gradient: linear-gradient(135deg, #111C4E 0%, #0053FF 55%, #FF5100 100%);
+  --ds-gradient-soft: linear-gradient(135deg, #111C4E 0%, #0053FF 100%);
+
+  /* ---- Tipografía ---- */
+  --ds-font: 'Inter', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ds-fw-light: 300;
+  --ds-fw-regular: 400;
+  --ds-fw-medium: 500;
+  --ds-fw-bold: 700;
+
+  --ds-text-display: 48px;   --ds-lh-display: 56px;
+  --ds-text-title: 36px;     --ds-lh-title: 44px;
+  --ds-text-heading: 28px;   --ds-lh-heading: 36px;
+  --ds-text-lead: 24px;      --ds-lh-lead: 32px;
+  --ds-text-body: 20px;      --ds-lh-body: 30px;
+  --ds-text-ui: 16px;        --ds-lh-ui: 24px;
+  --ds-text-sm: 14px;        --ds-lh-sm: 20px;
+  --ds-text-xs: 12px;        --ds-lh-xs: 16px;
+  --ds-tracking-tight: -0.02em;
+
+  /* ---- Espaciado (4px) ---- */
+  --ds-space-1: 4px;  --ds-space-2: 8px;  --ds-space-3: 12px;
+  --ds-space-4: 16px; --ds-space-5: 24px; --ds-space-6: 32px;
+  --ds-space-7: 48px; --ds-space-8: 64px; --ds-space-9: 96px;
+
+  /* ---- Radios ---- */
+  --ds-radius-sm: 6px;
+  --ds-radius-md: 10px;
+  --ds-radius-lg: 12px;
+  --ds-radius-xl: 20px;
+  --ds-radius-pill: 999px;
+
+  /* ---- Sombras ---- */
+  --ds-shadow-sm: 0 1px 2px rgba(17,28,78,.08);
+  --ds-shadow-md: 0 4px 16px rgba(17,28,78,.10);
+  --ds-shadow-lg: 0 16px 40px rgba(17,28,78,.14);
+
+  /* ---- Motion ---- */
+  --ds-ease: cubic-bezier(.2,.7,.3,1);
+  --ds-dur-fast: 120ms;
+  --ds-dur: 200ms;
+}
+
+[data-theme="dark"] {
+  --ds-bg: #0A1236;
+  --ds-bg-subtle: #111C4E;
+  --ds-bg-inverse: #FFFFFF;
+  --ds-surface: #16215A;
+  --ds-border: #2A3C8F;
+  --ds-border-strong: #4A5AA8;
+  --ds-text: #FFFFFF;
+  --ds-text-muted: #A8B0D0;
+  --ds-text-inverse: #111C4E;
+  --ds-accent: #FF5100;
+  --ds-accent-hover: #FF7433;
+  --ds-accent-text: #FF9466;
+  --ds-on-accent: #FFFFFF;
+  --ds-link: #FFFFFF;
+  --ds-link-hover: #FF9466;
+  --ds-shadow-sm: 0 1px 2px rgba(0,0,0,.4);
+  --ds-shadow-md: 0 4px 16px rgba(0,0,0,.45);
+  --ds-shadow-lg: 0 16px 40px rgba(0,0,0,.5);
+}
+
+/* Reset mínimo de marca */
+html { -webkit-font-smoothing: antialiased; }
+body {
+  margin: 0;
+  font-family: var(--ds-font);
+  font-size: var(--ds-text-ui);
+  line-height: var(--ds-lh-ui);
+  color: var(--ds-text);
+  background: var(--ds-bg);
+}
+a { color: var(--ds-link); text-underline-offset: 3px; }
+a:hover { color: var(--ds-link-hover); }
+:focus-visible { outline: 2px solid var(--ds-focus); outline-offset: 2px; }

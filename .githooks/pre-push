@@ -1,0 +1,3 @@
+#!/bin/sh
+# Antes de subir: auditoria de dependencias y secretos (govulncheck, cargo audit, npm audit, gitleaks).
+exec powershell -NoProfile -ExecutionPolicy Bypass -File "$(git rev-parse --show-toplevel)/scripts/auditoria.ps1"

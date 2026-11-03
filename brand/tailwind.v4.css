@@ -1,0 +1,54 @@
+/* Diusframi — Tailwind v4
+   @import "tailwindcss"; después este archivo. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300..700;1,300..700&display=swap');
+
+@theme {
+  --color-navy-50:  #F2F4F9;
+  --color-navy-100: #DDE1EE;
+  --color-navy-300: #8E97BC;
+  --color-navy-600: #2A3C8F;
+  --color-navy-700: #1B2A6F;
+  --color-navy-800: #111C4E;
+  --color-navy-900: #0A1236;
+
+  --color-orange-100: #FFE3D6;
+  --color-orange-300: #FF9466;
+  --color-orange-500: #FF5100;
+  --color-orange-600: #E04700;
+  --color-orange-700: #B33900;
+
+  --color-electric-100: #D9E4FF;
+  --color-electric-500: #0053FF;
+  --color-electric-600: #0043CC;
+
+  --color-brandyellow-100: #FFF4D6;
+  --color-brandyellow-500: #FFD040;
+  --color-brandyellow-600: #D6A400;
+
+  --color-success: #0E8F5B;
+  --color-danger:  #D92D20;
+
+  --font-sans: 'Inter', -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --text-display: 48px;
+  --text-display--line-height: 56px;
+  --text-title: 36px;
+  --text-title--line-height: 44px;
+  --text-heading: 28px;
+  --text-heading--line-height: 36px;
+  --text-lead: 24px;
+  --text-lead--line-height: 32px;
+  --text-body: 20px;
+  --text-body--line-height: 30px;
+
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+
+  --shadow-card: 0 4px 16px rgba(17,28,78,.10);
+  --shadow-float: 0 16px 40px rgba(17,28,78,.14);
+}
+
+@utility bg-brand-gradient {
+  background-image: linear-gradient(135deg, #111C4E 0%, #0053FF 55%, #FF5100 100%);
+}

@@ -1,0 +1,46 @@
+/* Diusframi — override de tema para shadcn/ui
+   Pegar en globals.css después de las capas de Tailwind. */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 229 64% 18%;
+  --card: 0 0% 100%;
+  --card-foreground: 229 64% 18%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 229 64% 18%;
+  --primary: 19 100% 50%;          /* #FF5100 */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 226 33% 95%;
+  --secondary-foreground: 229 64% 18%;
+  --muted: 226 33% 95%;
+  --muted-foreground: 229 25% 44%;
+  --accent: 220 100% 50%;          /* #0053FF */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 4 74% 49%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 226 33% 90%;
+  --input: 226 33% 90%;
+  --ring: 220 100% 50%;
+  --radius: 0.625rem;              /* 10px */
+}
+
+.dark {
+  --background: 229 69% 13%;
+  --foreground: 0 0% 100%;
+  --card: 229 60% 22%;
+  --card-foreground: 0 0% 100%;
+  --popover: 229 60% 22%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 19 100% 50%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 229 64% 18%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 229 64% 18%;
+  --muted-foreground: 228 30% 74%;
+  --accent: 220 100% 50%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 4 74% 49%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 229 54% 36%;
+  --input: 229 54% 36%;
+  --ring: 220 100% 50%;
+}

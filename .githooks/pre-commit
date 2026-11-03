@@ -1,0 +1,3 @@
+#!/bin/sh
+# Hook de git (delegado a PowerShell): escaneo de secretos antes del commit.
+exec powershell -NoProfile -ExecutionPolicy Bypass -File "$(git rev-parse --show-toplevel)/scripts/pre-commit.ps1"
